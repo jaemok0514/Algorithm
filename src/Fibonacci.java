@@ -1,7 +1,3 @@
-import org.junit.Test;
-
-import static junit.framework.TestCase.assertEquals;
-
 public class Fibonacci {
     public int solution(int num){
         if(num > 20 || num < 0) return -1; //20 보다 큰 수나 0보다 작은 수가 들어오면

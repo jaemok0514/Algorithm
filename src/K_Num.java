@@ -1,5 +1,3 @@
-import org.junit.Test;
-
 public class K_Num {
     public int[] find_k(int[] array, int[][] commands) {
         if (array == null || commands == null) return null; //입력값이 null일때

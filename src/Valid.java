@@ -1,7 +1,3 @@
-import org.junit.Test;
-
-import static junit.framework.TestCase.assertEquals;
-
 public class Valid {
     public boolean isAnagram(String s, String t) {
         boolean flag = false;
