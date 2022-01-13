@@ -26,7 +26,7 @@ public class printer {
                     }
                 } //hashmap 최신화
             } else { //첫번쨰가 최댓값일때
-                arr.remove(0);
+                arr = Array_remove(arr);
                 pos++;
             }
         }
@@ -34,7 +34,7 @@ public class printer {
         return getKey(map,location);
     }
 
-    public int Array_max(ArrayList<Integer> arr) {
+    public int Array_max(ArrayList<Integer> arr) { //최댓값 출력
         int max = arr.get(0);
         for(int i = 1; i < arr.size(); i++) {
             if(max < arr.get(i)) {
@@ -44,12 +44,20 @@ public class printer {
         return  max;
     }
 
-    public ArrayList<Integer> Array_sort(ArrayList<Integer> arr) {
+    public ArrayList<Integer> Array_sort(ArrayList<Integer> arr) { //맨 앞 값을 맨 뒤로 보냄
         ArrayList<Integer> newArr = new ArrayList<>();
         for(int i = 1; i < arr.size(); i++) {
             newArr.add(arr.get(i));
         }
         newArr.add(arr.get(0));
+        return newArr;
+    }
+
+    public ArrayList<Integer> Array_remove(ArrayList<Integer> arr) { //맨 앞 값 삭제
+        ArrayList<Integer> newArr = new ArrayList<>();
+        for(int i = 1; i < arr.size(); i++) {
+            newArr.add(arr.get(i));
+        }
         return newArr;
     }
 
